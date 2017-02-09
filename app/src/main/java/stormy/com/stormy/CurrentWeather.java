@@ -2,8 +2,7 @@ package stormy.com.stormy;
 
 
 import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.TimeZone;
+import java.util.Calendar;
 
 public class CurrentWeather {
     private String mIcon;
@@ -74,12 +73,23 @@ public class CurrentWeather {
     }
 
     public String getFormattedTime(){
-        SimpleDateFormat formatter = new SimpleDateFormat("h:mm a"); //h=hour, m=min, a= am or pm
+
+        Calendar c = Calendar.getInstance();
+        SimpleDateFormat df = new SimpleDateFormat("h:mm a");
+        String formattedDate = df.format(c.getTime());
+
+        return formattedDate;
+
+
+
+
+       /* SimpleDateFormat formatter = new SimpleDateFormat("h:mm a"); //h=hour, m=min, a= am or pm
         formatter.setTimeZone(TimeZone.getTimeZone(getTimeZone()));
         Date dateTime = new Date(getTime()*1000);
         String timeString = formatter.format(dateTime);
 
-        return timeString;
+
+        return timeString; */
     }
 
     public void setTime(long time) {

@@ -20,7 +20,8 @@
             android:layout_below="@+id/temperatureLabel"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:weightSum="100">
+            android:weightSum="100"
+            android:id="@+id/linearLayout">
 
             <LinearLayout
                 android:orientation="vertical"
@@ -38,7 +39,7 @@
                     />
 
                 <TextView
-                    android:text="__"
+                    android:text="..."
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/humidityValue"
@@ -62,7 +63,7 @@
                     />
 
                 <TextView
-                    android:text="__"
+                    android:text="..."
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/precipValue"
@@ -74,7 +75,7 @@
         </LinearLayout>
 
         <TextView
-            android:text="getting current weather"
+            android:text="getting current weather..."
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/summaryLabel"
@@ -110,7 +111,7 @@
             android:layout_marginEnd="9dp"/>
 
         <TextView
-            android:text="Long Beach, California"
+            android:text="************"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/locationLabel"
@@ -122,7 +123,7 @@
             android:layout_centerHorizontal="true"/>
 
         <TextView
-            android:text="__"
+            android:text="..."
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/temperatureLabel"
@@ -163,6 +164,25 @@
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="22dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/coordinates"
+            android:layout_above="@+id/summaryLabel"
+            android:layout_centerHorizontal="true"
+            android:textSize="14sp"
+            android:textColor="@android:color/background_light"
+            android:text="***"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/coordinates"
+            android:layout_centerHorizontal="true"
+            android:textColor="#80ffffff"
+            android:text="Coordinates"
+            android:id="@+id/coordinatesLabel"/>
 
     </RelativeLayout>
 
